@@ -35,7 +35,7 @@ export class ProductsController {
         @Body('description') prodDesc: string,
         @Body('price') prodPrice: number,
     ) {
-        const updated = this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice)
+        this.productsService.updateProduct(prodId, prodTitle, prodDesc, prodPrice)
         return null;
     }
 
